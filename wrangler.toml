@@ -1,9 +1,12 @@
 name = "faroldacidadania"
 compatibility_date = "2026-01-01"
 
+[assets]
+directory = "./public"
+
 [env.production]
 name = "faroldacidadania"
 
-# Cloudflare Pages não precisa de wrangler.toml para deploy estático
-# Este arquivo é útil para desenvolvimento local
+# Cloudflare Pages - configuração para deploy estático
+# O diretório public/ contém todos os arquivos estáticos
 

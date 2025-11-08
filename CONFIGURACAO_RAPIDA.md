@@ -61,8 +61,8 @@ Guia passo a passo para colocar o app no ar em **menos de 30 minutos**.
 
 #### 2.1. Copiar Credenciais
 
-1. Abra o arquivo `src/firebase-config.js.example`
-2. Copie para `src/firebase-config.js`
+1. Abra o arquivo `public/src/firebase-config.js.example`
+2. Copie para `public/src/firebase-config.js`
 3. Cole as credenciais do Firebase:
 
 ```javascript

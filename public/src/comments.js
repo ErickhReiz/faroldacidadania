@@ -1,3 +1,5 @@
+import { firebaseConfig } from './firebase-config.js';
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
 import { 
     getFirestore, 
     collection, 
@@ -6,12 +8,11 @@ import {
     orderBy, 
     onSnapshot,
     Timestamp 
-} from 'firebase/firestore';
-import { getAuth } from 'firebase/auth';
-import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from './firebase-config.js';
+} from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+import { getAuth } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
 
-// Inicializar Firestore (já inicializado no auth.js, mas vamos garantir)
+// Inicializar Firestore (compartilha a mesma app instance do auth.js)
+// Nota: initializeApp pode ser chamado múltiplas vezes com a mesma config, Firebase retorna a mesma instância
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
@@ -115,4 +116,3 @@ export function formatDate(date) {
         minute: '2-digit'
     });
 }
-

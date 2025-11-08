@@ -1,4 +1,5 @@
-import { initializeApp } from 'firebase/app';
+import { firebaseConfig } from './firebase-config.js';
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
 import { 
     getAuth, 
     signInWithEmailAndPassword, 
@@ -6,8 +7,7 @@ import {
     signOut,
     onAuthStateChanged,
     updateProfile
-} from 'firebase/auth';
-import { firebaseConfig } from './firebase-config.js';
+} from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
 
 // Inicializar Firebase
 const app = initializeApp(firebaseConfig);
@@ -81,4 +81,3 @@ function getErrorMessage(error) {
     
     return errorCodes[error.code] || error.message || 'Ocorreu um erro. Tente novamente.';
 }
-

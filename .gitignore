@@ -33,5 +33,5 @@ build/
 npm-debug.log*
 
 # Firebase config (será criado pelo usuário)
-src/firebase-config.js
+public/src/firebase-config.js
 

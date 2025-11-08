@@ -192,8 +192,9 @@ Edite os textos diretamente em `public/index.html`.
 
 ### Erro: "Firebase: Error (auth/configuration-not-found)"
 
-- Verifique se você criou o arquivo `src/firebase-config.js`
+- Verifique se você criou o arquivo `public/src/firebase-config.js`
 - Confirme se todas as credenciais estão corretas
+- Certifique-se de que o arquivo está dentro da pasta `public/src/`
 
 ### Erro: "Permission denied" no Firestore
 

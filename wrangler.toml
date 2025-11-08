@@ -1,0 +1,9 @@
+name = "faroldacidadania"
+compatibility_date = "2026-01-01"
+
+[env.production]
+name = "faroldacidadania"
+
+# Cloudflare Pages não precisa de wrangler.toml para deploy estático
+# Este arquivo é útil para desenvolvimento local
+

@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Firebase
+.firebase/
+firebase-debug.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+.wrangler/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Firebase config (será criado pelo usuário)
+src/firebase-config.js
+

@@ -1,0 +1,26 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Comentários: qualquer usuário autenticado pode ler, apenas o autor pode escrever
+    match /comments/{commentId} {
+      // Permite leitura para usuários autenticados
+      allow read: if request.auth != null;
+      
+      // Permite criação apenas se o user_id do comentário for o mesmo do usuário autenticado
+      allow create: if request.auth != null 
+                    && request.auth.uid == request.resource.data.user_id
+                    && request.resource.data.content is string
+                    && request.resource.data.content.size() > 0
+                    && request.resource.data.timestamp is timestamp;
+      
+      // Permite atualização apenas pelo autor (para futuras edições)
+      allow update: if request.auth != null 
+                    && request.auth.uid == resource.data.user_id;
+      
+      // Permite deleção apenas pelo autor (para futuras remoções)
+      allow delete: if request.auth != null 
+                    && request.auth.uid == resource.data.user_id;
+    }
+  }
+}
+

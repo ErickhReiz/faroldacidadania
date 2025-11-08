@@ -1,0 +1,25 @@
+{
+  "name": "faroldacidadania",
+  "version": "1.0.0",
+  "description": "App de comentários e participação cidadã - Cloudflare Pages + Firebase",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler pages dev public",
+    "deploy": "wrangler pages deploy public"
+  },
+  "keywords": [
+    "cloudflare",
+    "firebase",
+    "spa",
+    "comments"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "firebase": "^10.7.1"
+  }
+}
+

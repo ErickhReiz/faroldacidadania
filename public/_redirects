@@ -1,0 +1,4 @@
+# Cloudflare Pages - Redirect para SPA
+# Todas as rotas não encontradas redirecionam para index.html
+/*    /index.html   200
+

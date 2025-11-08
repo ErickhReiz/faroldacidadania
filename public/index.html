@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faro da Cidadania - Participação e Comentários</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏛️ Faro da Cidadania</h1>
+            <p class="subtitle">Sua voz importa. Participe e comente.</p>
+        </header>
+
+        <!-- Área de Autenticação -->
+        <div id="auth-section" class="auth-section">
+            <div class="auth-container">
+                <h2>Entrar</h2>
+                <form id="login-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                    <button type="button" id="show-register" class="btn btn-link">Não tem conta? Cadastre-se</button>
+                </form>
+
+                <form id="register-form" class="auth-form hidden">
+                    <div class="form-group">
+                        <label for="reg-name">Nome</label>
+                        <input type="text" id="reg-name" name="name" required placeholder="Seu nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">E-mail</label>
+                        <input type="email" id="reg-email" name="email" required placeholder="seu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Senha</label>
+                        <input type="password" id="reg-password" name="password" required placeholder="Mínimo 6 caracteres" minlength="6">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    <button type="button" id="show-login" class="btn btn-link">Já tem conta? Entrar</button>
+                </form>
+
+                <div id="auth-error" class="error-message hidden"></div>
+            </div>
+        </div>
+
+        <!-- Área Logada -->
+        <div id="app-section" class="app-section hidden">
+            <div class="user-info">
+                <span>Olá, <strong id="user-name"></strong>!</span>
+                <button id="logout-btn" class="btn btn-secondary">Sair</button>
+            </div>
+
+            <!-- Formulário de Comentário -->
+            <div class="comment-form-container">
+                <h2>Deixe seu comentário</h2>
+                <form id="comment-form" class="comment-form">
+                    <textarea 
+                        id="comment-content" 
+                        name="content" 
+                        rows="4" 
+                        placeholder="Compartilhe sua opinião, sugestão ou dúvida..."
+                        required
+                    ></textarea>
+                    <button type="submit" class="btn btn-primary">Publicar Comentário</button>
+                </form>
+            </div>
+
+            <!-- Lista de Comentários -->
+            <div class="comments-section">
+                <h2>Comentários</h2>
+                <div id="comments-container" class="comments-container">
+                    <p class="loading">Carregando comentários...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
+
